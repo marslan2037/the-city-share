@@ -47,10 +47,11 @@
         .main-container header ul li:last-child {
           margin: 0; }
         .main-container header ul li a {
+          color: #000000;
           text-decoration: none; }
   .main-container .banner {
     height: 250px;
-    background: url(images/banner.jpg);
+    background: url(../images/banner.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
