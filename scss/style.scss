@@ -29,17 +29,32 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 50px 43px;
+        @media (min-width: 320px) and (max-width: 767px) {
+            padding: 10px;
+            height: 115px;
+            grid-template-rows: 62px 43px;
+        }
 
         .company-name {
+            @media (min-width: 320px) and (max-width: 767px) {
+                text-align: center;
+                grid-column: 1/3;
+            }
             .name {
                 position: relative;
                 display: inline-block;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    display: block;
+                }
                 h2 {
                     color: #003072;
                     font-weight: bold;
                     font-size: 36px;
                     position: relative;
                     display: inline-block;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        font-size: 32px;
+                    }
                 }
                 span {
                     position: absolute;
@@ -64,11 +79,35 @@
             &:hover {
                 background: linear-gradient(to right, #997d13, #ceb055);
             }
+            @media (min-width: 320px) and (max-width: 767px) {
+                justify-self: start;
+            }
+        }
+
+        .mobile-button {
+            display: none;
+            @media (min-width: 320px) and (max-width: 767px) {
+                display: block;
+                justify-self: end;
+                font-size: 22px;
+                align-self: center;
+            }
         }
 
         ul {
             grid-column: 1/3;
             text-align: right;
+            @media (min-width: 320px) and (max-width: 767px) {
+                grid-column: 1/2;
+                display: none;
+                position: absolute;
+                top: 115px;
+                right: 0;
+                width: 165px;
+                background: #fff;
+                z-index: 10;
+                box-shadow: 1px 2px 5px #4e4e4e;
+            }
             li {
                 display: inline-block;
                 padding: 0 13px 0 10px;
@@ -76,6 +115,11 @@
                 border-right: 1px solid #006ec9;
                 min-width: 70px;
                 text-align: center;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    display: block;
+                    text-align: left;
+                    border: none;
+                }
 
                 a {
                     color: #000000;
@@ -104,13 +148,19 @@
             top: 50px;
             transform: translate(-50%,0);
             text-align: center;
-            width: 640px;
+            max-width: 640px;
+            @media (min-width: 320px) and (max-width: 767px) {
+                width: 300px;
+            }
             p.text-18, p.text-23 {
                 font-weight: bold;
             }
             p.text-18 {
                 font-size: 18px;
                 line-height: 26px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 14px;
+                }
             }
             p.text-18.m-b-5 {
                 margin: 0 0 5px;
@@ -118,6 +168,10 @@
             p.text-23 {
                 font-size: 23px;
                 line-height: 36px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 14px;
+                    line-height: 26px;
+                }
             }
             p.text-23.m-b-8 {
                 margin: 0 0 8px;
@@ -132,18 +186,30 @@
     .banner.home-page {
         height: 557px;
         margin: 0 0 35px;
+        @media (min-width: 320px) and (max-width: 767px) {
+            height: 395px;
+        }
     }
     
     .main-title {
         margin-bottom: 20px;
         position: relative;
+        @media (min-width: 320px) and (max-width: 767px) {
+            margin: 10px 0 20px;
+        }
         h2 {
             color: #003773;
             font-size: 73px !important;
             font-weight: bold !important;
+            @media (min-width: 320px) and (max-width: 767px) {
+                font-size: 32px !important;
+            }
         }
         h2.text-37 {
             font-size: 37px !important;
+            @media (min-width: 320px) and (max-width: 767px) {
+                font-size: 32px !important;
+            }
         }
         span {
             position: absolute;
@@ -162,18 +228,27 @@
     }
     .middle-content {
         margin: 0 auto 100px;
+        @media (min-width: 320px) and (max-width: 767px) {
+            padding: 0 15px;
+        }
         .p-headings {
             text-align: center;
             p {
                 font-weight: 500;
                 font-size: 18px;
                 color: #000;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 14px;
+                }
             }
             h2 {
                 font-size: 30px;
                 color: #003773;
                 font-weight: 500;
                 margin: 0 0 48px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    margin: 0 0 22px;
+                }
             }
         }
         .arrow-down {
@@ -186,21 +261,41 @@
             grid-gap: 22px;
             grid-template-rows: 20px 275px;
             margin: 0 0 30px;
+            @media (min-width: 320px) and (max-width: 767px) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                width: 290px;
+                justify-content: center;
+                margin: 0 auto 30px;
+            }
             img {
                 width: 100%;
             }
             .first-child {
                 grid-row: 2;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-row: initial;
+                }
             }
             .second-child {
                 grid-column: 2;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-column: initial;
+                }
             }
             .third-child {
                 grid-column: 3;
                 grid-row: 2;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-column: initial;
+                    grid-row: initial;
+                }
             }
             .fourth-child {
                 grid-column: 4;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-column: initial;
+                }
             }
         }
         .detail-text {
@@ -218,11 +313,18 @@
             height: 54px;
             margin: auto;
             margin-bottom: 30px;
+            @media (min-width: 320px) and (max-width: 767px) {
+                height: initial;
+                margin: 0 0 15px;
+            }
 
             p {
                 padding: 0 10px;
                 line-height: 54px;
                 color: #005698;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    line-height: 26px;
+                }
             }
         }
         .b-section {
@@ -230,15 +332,24 @@
             grid-template-columns: 1.4fr 1fr;
             align-items: center;
             text-align: center;
+            @media (min-width: 320px) and (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
             .main-title {
                 display: inline-block;
             }
             p.have-span {
                 grid-column: 1 / 3;
                 margin: 0 0 18px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-column: initial;
+                }
             }
             p {
                 font-size: 20px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 16px;
+                }
                 span {
                     font-size: 10px;
                 }
@@ -247,10 +358,13 @@
                 background: #f5e8d5;
                 padding: 15px;
                 grid-column: 1 / 3;
-                width: 592px;
+                max-width: 592px;
                 margin: 0 auto 35px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-column: initial;
+                }
                 .border-box-heading {
-                    width: 370px;
+                    max-width: 370px;
                     height: 35px;
                     p {
                         line-height: 35px;
@@ -261,6 +375,9 @@
                     display: grid;
                     grid-template-columns: 2.2fr 2.5fr;
                     grid-gap: 20px;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                    }
                     h2 {
                         font-size: 18px;
                         display: grid;
@@ -318,6 +435,9 @@
             grid-gap: 40px;
             margin: 0 auto;
             justify-content: center;
+            @media (min-width: 320px) and (max-width: 767px) {
+                grid-template-columns: 275px;
+            }
             .single-box {
                 padding: 0 0 3px;
                 background: #f5e8d5;
@@ -441,11 +561,13 @@
     }
 
     .bottom-box {
-        // background: linear-gradient(to right, #ddc16b, #997d13);
         background-image: linear-gradient(to right, #ddc16b, #997d13 400px, #997d13 800px);
         padding: 12px;
-        width: 466px;
+        max-width: 466px;
         margin: 0 auto 25px;
+        @media (min-width: 320px) and (max-width: 767px) {
+            margin: 0 10px 20px;
+        }
         .box-content {
             display: grid;
             grid-template-columns: 9fr 1fr;
@@ -453,6 +575,9 @@
             align-items: center;
             padding: 6px;
             border: 1px solid #fff;
+            @media (min-width: 320px) and (max-width: 767px) {
+                grid-template-columns: 8fr 1fr;
+            }
             .doc-button {
                 grid-row: 1 / 3;
                 justify-self: end;
@@ -473,9 +598,15 @@
             p {
                 font-size: 15px;
                 color: #fff;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 12px;
+                }
             }
             p.prominent-text {
                 font-size: 21px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -488,6 +619,16 @@
         align-items: center;
         grid-gap: 24px;
         margin: 0 auto 35px;
+        @media (min-width: 320px) and (max-width: 767px) {
+            grid-template-columns: 1fr;
+            margin: 0 auto 15px;
+            padding: 0 15px;
+            text-align: center;
+
+            img {
+                justify-self: center;
+            }
+        }
 
         p.have-bordered {
             text-align: center;
